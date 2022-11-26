@@ -7,3 +7,5 @@ variable instance_type {}
 variable public_key_location {
     sensitive = true
 }
+//variable private_key_location {}
+variable image_name {}
