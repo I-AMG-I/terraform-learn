@@ -31,3 +31,12 @@ module "myapp-server" {
   subnet_id = module.myapp-subnet.subnet.id
   avail_zone = var.avail_zone
 }
+
+module "myapp-ecr" {
+  source = "./modules/ecr"
+  env_prefix = var.env_prefix
+}
+
+module "mystate-s3backup" {
+  source = "./modules/s3backup"
+}
